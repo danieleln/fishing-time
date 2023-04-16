@@ -12,5 +12,5 @@ echo "fishing-time"                                         >  $LOG_FILE
 date                                                        >> $LOG_FILE
 
 
-chmod u+x ${__HERE__}/src/_set_up_fish.bash
-${__HERE__}/src/_set_up_fish.bash ${LOG_FILE}
+chmod u+x ${__HERE__}/src/_setup_fish.bash
+${__HERE__}/src/_setup_fish.bash ${LOG_FILE}
