@@ -1,13 +1,9 @@
 #!/usr/bin/bash
 
 
-LOG_FILE="/tmp/fishing_time.log"
-
-# initializing the log file
-echo "fishing-time"                                         >  $LOG_FILE
-date                                                        >> $LOG_FILE
-
-
+LOG_FILE="$1"
+echo $LOG_FILE
+exit
 
 # check if the fish shell is already installed
 if which fish > /dev/null; then
@@ -24,14 +20,17 @@ else
     sudo apt install fish -y                                2> $LOG_FILE
 
 
-    # verifying if fish has been installed correctly
-    if which fish > /dev/null; then
-        # change default shell to fish
-        chsh -s $(which fish)
-    else
-        echo "Something went wrong during the installation of the fish shell."
-        echo "Please refer to the log file \"$LOG_FILE\""
-        exit 1
-    fi
 
+fi
+
+
+# verifying if fish has been installed correctly
+if which fish > /dev/null; then
+    # change default shell to fish
+    echo "Enter your password to change the default shell to fish:"
+    chsh -s $(which fish)
+else
+    echo "Something went wrong during the installation of the fish shell."
+    echo "Please refer to the log file \"$LOG_FILE\""
+    exit 1
 fi
