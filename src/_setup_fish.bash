@@ -1,14 +1,15 @@
 #!/usr/bin/bash
 
 
-LOG_FILE=$1
+# log file
+LOG_FILE="$1"
 
 
 # checking if the fish shell is already installed
 if which fish > /dev/null; then
 
     # fish is already installed
-    echo -e "\n\nFISH SHELL IS ALREADY INSTALLED."          >>  $LOG_FILE
+    echo -e "\n\n\nFISH SHELL IS ALREADY INSTALLED."          >>  $LOG_FILE
     echo -e "NO NEED TO INSTALL IT."                        >>  $LOG_FILE
 
 else
@@ -35,8 +36,8 @@ fi
 # changing default shell to fish
 if [ "$SHELL" != "$(which fish)" ]; then
     echo "Enter your password to change the default shell to fish:"
-    echo -e "\n\n\nCHANGING DEFAULT SHELL TO FISH"      >>  $LOG_FILE
-    chsh -s $(which fish)                               2>> $LOG_FILE
+    echo -e "\n\n\nCHANGING DEFAULT SHELL TO FISH"          >>  $LOG_FILE
+    chsh -s $(which fish)                                   2>> $LOG_FILE
 
 
     # verifying if the shell was changed succesfully
