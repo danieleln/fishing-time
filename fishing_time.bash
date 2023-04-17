@@ -21,6 +21,7 @@ date                >> $LOG_FILE
 
 # install fish and make it the default shell
 chmod u+x ${__HERE__}/src/_setup_fish.bash
+${__HERE__}/src/_setup_fish.bash ${LOG_FILE}
 
 # import all the dotfiles
 chmod u+x ${__HERE__}/src/_import_dotfiles.bash
