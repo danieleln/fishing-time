@@ -9,7 +9,7 @@ LOG_FILE="$1"
 if which fish > /dev/null; then
 
     # fish is already installed
-    echo -e "\n\n\nFISH SHELL IS ALREADY INSTALLED."          >>  $LOG_FILE
+    echo -e "\n\n\nFISH SHELL IS ALREADY INSTALLED."        >>  $LOG_FILE
     echo -e "NO NEED TO INSTALL IT."                        >>  $LOG_FILE
 
 else
