@@ -1,4 +1,5 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
+
 
 set prompt_symbol_user  'ﬦ'
 set prompt_symbol_root  'Λ'
@@ -15,7 +16,7 @@ set cl_git_committed         normal
 set cl_low_contrast          brblack
 
 function fish_prompt
-
+    
     # exit code
     set exit_code $status
     if test $exit_code != 0
@@ -37,21 +38,29 @@ function fish_prompt
     printf (set_color $cl_working_dir)$working_dir
 
 
+
     # git repo
     printf (set_color $cl_low_contrast)'('
     printf (set_color $cl_low_contrast)')'
     
+    
+
     # open a new line
     echo
 
+
+
     # prompt symbol
+    printf "$(set_color $cl_low_contrast)╰─ "
+
     if fish_is_root_user
-        printf (set_color $cl_prompt_symbol_root) $prompt_symbol_root
+        printf "$(set_color $cl_prompt_symbol_root)$prompt_symbol_root "
     else
         printf "$(set_color $cl_prompt_symbol_user)$prompt_symbol_user "
     end
 
     # printf "❯ "
+
 
 
     # reset color
