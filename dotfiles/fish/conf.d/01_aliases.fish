@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 
-# listing
+
 alias l="   exa -1F   -s type --icons"   # list
 alias ll="  exa -lF   -s type --icons"   # list long
 alias la="  exa -1aF  -s type --icons"   # list all
@@ -13,12 +13,18 @@ alias ls="  exa -1F   -s type --icons"   # list
 alias tree="exa -TF   -s type --icons"   # list tree
 
 
-# text editor
+
+alias clr="clear"
+alias cls="clear; ls; echo"
+alias cll="clear; ll; echo"
+
+
+
 alias vi="nvim"
 alias vim="nvim"
 
 
-# change directory
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias .1="cd .."
@@ -30,6 +36,5 @@ alias .6="cd ../../../../../.."
 alias .7="cd ../../../../../../.."
 
 
-# other aliases
-alias cls="clear"
+
 alias quit="exit"
