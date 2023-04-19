@@ -15,11 +15,11 @@ if which fish > /dev/null; then
 else
     # installing fish
     echo "Installing fish shell."
-    echo "Please type in your password to start the installation"
+    echo "Please, type in your password to start the installation"
     echo -e "\n\n\nINSTALLING FISH SHELL"                   >>  $LOG_FILE
-    sudo apt-add-repository ppa:fish-shell/release-3 -y     2>> $LOG_FILE
-    sudo apt update                                         2>> $LOG_FILE
-    sudo apt install fish -y                                2>> $LOG_FILE
+    sudo apt-add-repository ppa:fish-shell/release-3 -y     2>> $LOG_FILE | tee -a $LOG_FILE
+    sudo apt update                                         2>> $LOG_FILE | tee -a $LOG_FILE
+    sudo apt install fish -y                                2>> $LOG_FILE | tee -a $LOG_FILE
 
 
     # verifying if fish has been installed correctly
