@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 
+# log file
+LOG_FILE="$1"
+
 cd /tmp
 
 # downloading the latest stable release of neovim

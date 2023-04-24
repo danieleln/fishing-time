@@ -11,7 +11,6 @@ LOG_FILE="$1"
 declare -r __HERE__=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 
-echo -e "\n\n\nINSTALLING PROGRAMS" >> $LOG_FILE
 
 
 # iterating all the file in the src folder
@@ -33,10 +32,9 @@ for file in ${__HERE__}/*; do
         
             if [[ "$answer" == 'y' || "$answer" == 'Y' ]]
             then
-                echo -e "\nINSTALLING $program_name" >> $LOG_FILE
                 # running the installation file
                 chmod u+x $file
-                $file
+                $file $LOG_FILE
             fi
         fi
 
