@@ -2,21 +2,58 @@
 
 
 
-alias l="   exa -1F   -s type --icons"   # list
-alias ll="  exa -lF   -s type --icons"   # list long
-alias la="  exa -1aF  -s type --icons"   # list all
-alias lla=" exa -laF  -s type --icons"   # list long all
-alias lt="  exa -TF   -s type --icons"   # list tree
-alias llt=" exa -lTF  -s type --icons"   # list long tree
-alias llta="exa -lTaF -s type --icons"   # list long tree all
-alias ls="  exa -1F   -s type --icons"   # list
-alias tree="exa -TF   -s type --icons"   # list tree
+# list (equivalent to ls)
+alias l="exa -1F -s type --icons"
+alias ls=l
+
+# list long
+alias ll="exa -lF -s type --icons"
+
+# list all
+alias la="exa -1aF -s type --icons"
+
+# list long all
+alias lla="exa -laF -s type --icons"
+
+# list tree (equivalent to tree)
+alias lt="exa -TF -s type --icons"
+alias tree=lt
+
+# list long tree
+alias llt="exa -lTF -s type --icons"
+
+# list long tree all
+alias llta="exa -lTaF -s type --icons"
 
 
 
 alias clr="clear"
-alias cls="clear; ls; echo"
-alias cll="clear; ll; echo"
+
+# clear and list
+function cl; clear; l $argv; echo; end
+funcsave -q cl
+alias cls=cl
+
+# clear and list long
+function cll; clear; ll $argv; echo; end
+funcsave -q cll
+
+# clear and list all
+function cla; clear; la $argv $argv; echo; end
+funcsave -q cla
+
+# clear and list long all
+function clla; clear; lla $argv; echo; end
+funcsave -q clla
+
+# clear and list tree
+function clt; clear; lt $argv; echo; end
+funcsave -q clt
+alias ctree=clt
+
+# clear and list long tree all
+function cllta; clear; llta $argv; echo; end
+funcsave -q cllta
 
 
 
@@ -37,4 +74,4 @@ alias .7="cd ../../../../../../.."
 
 
 
-alias quit="exit"
+alias quit="exit 0"
