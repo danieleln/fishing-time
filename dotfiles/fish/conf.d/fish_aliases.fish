@@ -38,6 +38,12 @@ function llt
 end
 funcsave -q llt
 
+# list tree all
+function lta
+    exa -TaF -s type --icons
+end
+funcsave -q lta
+
 # list long tree all
 function llta
     exa -lTaF -s type --icons
@@ -90,6 +96,14 @@ function clt
     echo
 end
 funcsave -q clt
+
+# clear and list tree all
+function clta
+    clear
+    lta $argv
+    echo
+end
+funcsave -q clta
 
 # clear and list long tree all
 function cllta
