@@ -1,77 +1,59 @@
 #!/usr/bin/env fish
 
-
-
-# list (equivalent to ls)
-alias l="exa -1F -s type --icons"
-alias ls=l
-
-# list long
-alias ll="exa -lF -s type --icons"
-
-# list all
-alias la="exa -1aF -s type --icons"
-
-# list long all
-alias lla="exa -laF -s type --icons"
-
-# list tree (equivalent to tree)
-alias lt="exa -TF -s type --icons"
-alias tree=lt
-
-# list long tree
-alias llt="exa -lTF -s type --icons"
-
-# list long tree all
-alias llta="exa -lTaF -s type --icons"
+# {{ LISTING ABBR }}
+abbr l    "exa -1F   -s type --icons"  # list (equivalent to ls)
+abbr ll   "exa -lF   -s type --icons"  # list long
+abbr la   "exa -1aF  -s type --icons"  # list all
+abbr lla  "exa -laF  -s type --icons"  # list long all
+abbr lt   "exa -TF   -s type --icons"  # list tree (equivalent to tree)
+abbr llt  "exa -lTF  -s type --icons"  # list long tree
+abbr llta "exa -lTaF -s type --icons"  # list long tree all
 
 
 
-alias clr="clear"
+# {{ CLEAR SCREEN (AND LIST) }}
 
-# clear and list
-function cl; clear; l $argv; echo; end
+abbr c "clear" # clear the screen
+
+function cl;    clear; l $argv;    echo; end  # clear and list
 funcsave -q cl
-alias cls=cl
 
-# clear and list long
-function cll; clear; ll $argv; echo; end
+function cll;   clear; ll $argv;   echo; end  # clear and list long
 funcsave -q cll
 
-# clear and list all
-function cla; clear; la $argv $argv; echo; end
+function cla;   clear; la $argv;   echo; end  # clear and list all
 funcsave -q cla
 
-# clear and list long all
-function clla; clear; lla $argv; echo; end
+function clla;  clear; lla $argv;  echo; end  # clear and list long all
 funcsave -q clla
 
-# clear and list tree
-function clt; clear; lt $argv; echo; end
+function clt;   clear; lt $argv;   echo; end  # clear and list tree
 funcsave -q clt
-alias ctree=clt
 
-# clear and list long tree all
-function cllta; clear; llta $argv; echo; end
+function cllta; clear; llta $argv; echo; end  # clear and list long tree all
 funcsave -q cllta
 
 
 
-alias vi="nvim"
-alias vim="nvim"
+# {{ NEOVIM ABBR }}
+abbr vim "nvim"
+abbr vi  "nvim"
 
 
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias .1="cd .."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
-alias .6="cd ../../../../../.."
-alias .7="cd ../../../../../../.."
+# {{ PARENT DIRECTORY ABBR }}
+abbr ..  "cd .."
+abbr ... "cd ../.."
+abbr .1  "cd .."
+abbr .2  "cd ../.."
+abbr .3  "cd ../../.."
+abbr .4  "cd ../../../.."
+abbr .5  "cd ../../../../.."
+abbr .6  "cd ../../../../../.."
+abbr .7  "cd ../../../../../../.."
 
 
 
-alias quit="exit 0"
+# {{ EXIT ABBR }}
+abbr exit "exit 0"
+abbr quit "exit 0"
