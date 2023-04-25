@@ -1,13 +1,49 @@
 #!/usr/bin/env fish
 
 # {{ LISTING ABBR }}
-abbr l    "exa -1F   -s type --icons"  # list (equivalent to ls)
-abbr ll   "exa -lF   -s type --icons"  # list long
-abbr la   "exa -1aF  -s type --icons"  # list all
-abbr lla  "exa -laF  -s type --icons"  # list long all
-abbr lt   "exa -TF   -s type --icons"  # list tree (equivalent to tree)
-abbr llt  "exa -lTF  -s type --icons"  # list long tree
-abbr llta "exa -lTaF -s type --icons"  # list long tree all
+
+# list (equivalent to ls)
+function l
+    exa -1F -s type --icons;
+end
+funcsave -q l
+
+# list long
+function ll
+    exa -lF -s type --icons
+end
+funcsave -q ll
+
+# list all
+function la
+    exa -1aF -s type --icons
+end
+funcsave -q la
+
+# list long all
+function lla
+    exa -laF -s type --icons
+end
+funcsave -q lla
+
+# list tree (equivalent to tree)
+function lt
+    exa -TF -s type --icons
+end
+funcsave -q lt
+
+# list long tree
+function llt
+    exa -lTF -s type --icons
+end
+funcsave -q llt
+
+# list long tree all
+function llta
+    exa -lTaF -s type --icons
+end
+funcsave -q llta
+
 
 
 
@@ -15,22 +51,52 @@ abbr llta "exa -lTaF -s type --icons"  # list long tree all
 
 abbr c "clear" # clear the screen
 
-function cl;    clear; l $argv;    echo; end  # clear and list
+# clear and list
+function cl
+    clear
+    l $argv
+    echo
+end
 funcsave -q cl
 
-function cll;   clear; ll $argv;   echo; end  # clear and list long
+# clear and list long
+function cll
+    clear
+    ll $argv
+    echo
+end
 funcsave -q cll
 
-function cla;   clear; la $argv;   echo; end  # clear and list all
+# clear and list all
+function cla
+    clear
+    la $argv
+    echo
+end
 funcsave -q cla
 
-function clla;  clear; lla $argv;  echo; end  # clear and list long all
+# clear and list long all
+function clla
+    clear
+    lla $argv
+    echo
+end
 funcsave -q clla
 
-function clt;   clear; lt $argv;   echo; end  # clear and list tree
+# clear and list tree
+function clt
+    clear
+    lt $argv
+    echo
+end
 funcsave -q clt
 
-function cllta; clear; llta $argv; echo; end  # clear and list long tree all
+# clear and list long tree all
+function cllta
+    clear
+    llta $argv
+    echo
+end
 funcsave -q cllta
 
 
