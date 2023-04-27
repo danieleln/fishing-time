@@ -2,53 +2,19 @@
 
 # {{ LISTING ABBR }}
 
-# list (equivalent to ls)
+# list (equivalent to ls, but uses exa)
 function l
-    exa -1F -s type --icons;
+    exa -1F --group-directories-first -s extension --icons $argv
 end
 funcsave -q l
 
-# list long
-function ll
-    exa -lF -s type --icons
-end
-funcsave -q ll
-
-# list all
-function la
-    exa -1aF -s type --icons
-end
-funcsave -q la
-
-# list long all
-function lla
-    exa -laF -s type --icons
-end
-funcsave -q lla
-
-# list tree (equivalent to tree)
-function lt
-    exa -TF -s type --icons
-end
-funcsave -q lt
-
-# list long tree
-function llt
-    exa -lTF -s type --icons
-end
-funcsave -q llt
-
-# list tree all
-function lta
-    exa -TaF -s type --icons
-end
-funcsave -q lta
-
-# list long tree all
-function llta
-    exa -lTaF -s type --icons
-end
-funcsave -q llta
+abbr ll   l -lF   # list long
+abbr la   l -a    # list all
+abbr lla  l -la   # list long all
+abbr lt   l -T    # list tree (equivalent to tree)
+abbr llt  l -lT   # list long tree
+abbr lta  l -Ta   # list tree all
+abbr llta l -lTa  # list long tree all
 
 
 
@@ -65,53 +31,13 @@ function cl
 end
 funcsave -q cl
 
-# clear and list long
-function cll
-    clear
-    ll $argv
-    echo
-end
-funcsave -q cll
-
-# clear and list all
-function cla
-    clear
-    la $argv
-    echo
-end
-funcsave -q cla
-
-# clear and list long all
-function clla
-    clear
-    lla $argv
-    echo
-end
-funcsave -q clla
-
-# clear and list tree
-function clt
-    clear
-    lt $argv
-    echo
-end
-funcsave -q clt
-
-# clear and list tree all
-function clta
-    clear
-    lta $argv
-    echo
-end
-funcsave -q clta
-
-# clear and list long tree all
-function cllta
-    clear
-    llta $argv
-    echo
-end
-funcsave -q cllta
+abbr cll   cl -lF   # clear and list long
+abbr cla   cl -a    # clear and list all
+abbr clla  cl -la   # clear and list long all
+abbr clt   cl -T    # clear and list tree (equivalent to tree)
+abbr cllt  cl -lT   # clear and list long tree
+abbr clta  cl -Ta   # clear and list tree all
+abbr cllta cl -lTa  # clear and list long tree all
 
 
 
