@@ -14,9 +14,9 @@ abbr -a llta list -lTa    # list long tree all
 
 
 
-
 # {{ clear abbr }}
 abbr c "clear"
+
 
 
 # {{ clear-and-list abbr }}
@@ -30,6 +30,12 @@ abbr -a clt   clear-and-list -T    # clear and list tree
 abbr -a cllt  clear-and-list -lT   # clear and list long tree
 abbr -a clta  clear-and-list -Ta   # clear and list tree all
 abbr -a cllta clear-and-list -lTa  # clear and list long tree all
+
+
+
+# {{ cd-windows-path abbr }}
+# 'cd-windows-path' function is defined in .config/fish/functions
+abbr cdwin "cd-windows-path"
 
 
 
