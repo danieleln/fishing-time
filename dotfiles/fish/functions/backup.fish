@@ -5,6 +5,7 @@ function backup --description "Copy \"file\" as \"file.bak\""
 
 
     # options:
+    #   -h/--help: help page
     #   -H/--hidden: makes the backup file an hidden file by prepending a '.'
     argparse h/help H/hidden -- $argv
     or return
@@ -33,7 +34,7 @@ function backup --description "Copy \"file\" as \"file.bak\""
     end
 
     # hidden option
-    set -l PREFIX
+    set -l PREFIX ''
     if set -q _flag_hidden
         set PREFIX '.'
     end
