@@ -1,9 +1,22 @@
+-- Leader key
+-- The leader key must be set before plugins are required.
+-- See also :help mapleader
+vim.g.maplocalleader = ' '
+vim.g.mapleader      = ' '
+
+
+
+-- Disabling netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
 -- Scroll the screen by leaving at least 8 line by the start/end of the page
-vim.o.scrolloff = 8
+-- vim.o.scrolloff = 8
 
 -- Disable the mode indicator
 vim.o.showmode = false
---
+
 -- Set the height of the command line
 vim.o.cmdheight = 3
 
@@ -24,6 +37,7 @@ vim.o.hlsearch = false
 vim.o.incsearch = true
 
 -- Make line numbers default
+vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
@@ -35,10 +49,10 @@ vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
-vim.o.breakindent = true
+-- vim.o.breakindent = true
 
 -- Enable line wrapping
-vim.o.wrap = true
+-- vim.o.wrap = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -48,12 +62,14 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = 'auto'
 
--- Decrease update time
+-- Time in ms that nvim waits before updating the swap file
 vim.o.updatetime = 250
-vim.o.timeout = true
-vim.o.timeoutlen = 300
+
+-- Time in ms that nvim waits for a mapped sequence to complete
+-- vim.o.timeout = true
+-- vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

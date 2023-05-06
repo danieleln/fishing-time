@@ -4,7 +4,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 
 
--- [[ INSERT MODE BINDINGS ]]
+--[[ INSERT MODE BINDINGS ]]
 
 -- Enter normal mode with 'jj'
 vim.keymap.set('i', 'jj', '<esc>')
@@ -21,22 +21,21 @@ vim.keymap.set('i', '<enter>',     '')
 
 
 
--- [[ NORMAL MODE BINDINGS ]]
+--[[ NORMAL MODE BINDINGS ]]
 
 -- Make 'Y' yank till the end of the line
 vim.keymap.set('n', 'Y', 'y$')
 
--- Open the [TR]ee file view
-vim.keymap.set('n', '<leader>tr', vim.cmd.Ex)
-
 -- Remap j,k to deal with word wrapping
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- (these mappings can cause issues with macros that are supposed to
+-- work once per - actual - line)
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 
 
 
--- [[ VISUAL MODE BINDINGS ]]
+--[[ VISUAL MODE BINDINGS ]]
 
 -- Move lines up / down
 vim.keymap.set('x', 'J', ":move '>+1<cr>gv-gv")
