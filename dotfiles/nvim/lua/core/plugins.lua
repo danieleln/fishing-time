@@ -88,14 +88,23 @@ require('lazy').setup({
     },
 
     -- File explorer
-    'nvim-tree/nvim-tree.lua',
-    'nvim-tree/nvim-web-devicons',
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        }
+    },
 
 
-    -- Fuzzy Finder Algorithm
+    -- Telescope
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'BurntSushi/ripgrep',
+            'nvim-telescope/telescope-fzf-native.nvim',
+            'sharkdp/fd',
+        }
     },
 
 
@@ -113,5 +122,9 @@ require('lazy').setup({
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
+
+
+    -- Which key
+    'folke/which-key.nvim',
 
 }, {})

@@ -23,6 +23,9 @@ vim.keymap.set('i', '<enter>',     '')
 
 --[[ NORMAL MODE BINDINGS ]]
 
+-- toggle highlighting
+vim.keymap.set('n', '<leader>hl', ':set hlsearch!<cr>', { desc = 'Toggle [hl]search' })
+
 -- Make 'Y' yank till the end of the line
 vim.keymap.set('n', 'Y', 'y$')
 

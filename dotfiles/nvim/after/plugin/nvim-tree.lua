@@ -83,17 +83,17 @@ local function on_attach(bufnr)
 
 --[[ Other mappings ]]
 
--- Open the [f]ile [e]xplorer
-vim.keymap.set('n', '<leader>fe', function()
+-- [e]xplorer [t]oggle
+vim.keymap.set('n', '<leader>et', function()
     -- api.tree.reload()
     api.tree.toggle()
-end)
+end, { desc = 'nvim-tree: [t]oggle the [e]xplorer' })
 
--- [l]ocate [f]ile
-vim.keymap.set('n', '<leader>lf', function()
+-- [e]xplorer [l]ocate
+vim.keymap.set('n', '<leader>el', function()
     api.tree.find_file()
     api.tree.focus()
-end)
+end, { desc = 'nvim-tree: [l]ocate file in [e]xplorer' })
 
 
 

@@ -33,7 +33,7 @@ vim.o.softtabstop = 4
 vim.o.expandtab   = true
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.o.incsearch = true
 
 -- Make line numbers default
@@ -62,14 +62,14 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = 'auto'
+vim.wo.signcolumn = 'yes'
 
 -- Time in ms that nvim waits before updating the swap file
 vim.o.updatetime = 250
 
 -- Time in ms that nvim waits for a mapped sequence to complete
--- vim.o.timeout = true
--- vim.o.timeoutlen = 300
+vim.o.timeout = true
+vim.o.timeoutlen = 500
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
