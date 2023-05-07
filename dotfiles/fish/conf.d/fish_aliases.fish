@@ -39,6 +39,12 @@ abbr cdwin "cd-windows-path"
 
 
 
+# {{ mkdir-cd abbr }}
+# 'mkdir-cd' function is defined in .config/fish/functions
+abbr mkcd "mkdir-cd"
+
+
+
 # {{ cp, mkdir abbr }}
 abbr -a cp "cp -r"       # copy is now recursive by default
 abbr -a mkdir "mkdir -p" # mkdir now builds also the parent dir by default
