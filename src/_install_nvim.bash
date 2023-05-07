@@ -12,6 +12,13 @@ if ! dpkg -l libfuse2 > /dev/null 2>&1; then
     sudo apt install libfuse2
 fi;
 
+# plugin "telescope" requires the following packages:
+# https://github.com/BurntSushi/ripgrep#installation
+sudo apt-get install ripgrep
+# https://github.com/sharkdp/fd#installation
+sudo apt install fd-find
+
+
 # downloading the latest stable release of neovim
 wget --quiet https://github.com/neovim/neovim/releases/download/stable/nvim.appimage --output-document nvim
 
