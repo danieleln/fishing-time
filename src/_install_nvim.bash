@@ -12,6 +12,10 @@ if ! dpkg -l libfuse2 > /dev/null 2>&1; then
     sudo apt install libfuse2
 fi;
 
+# plugin "treesitter" requires a C compiler
+# https://github.com/nvim-treesitter/nvim-treesitter
+sudo apt install build-essential
+
 # plugin "telescope" requires the following packages:
 # https://github.com/BurntSushi/ripgrep#installation
 sudo apt-get install ripgrep
