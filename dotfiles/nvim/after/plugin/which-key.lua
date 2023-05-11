@@ -12,12 +12,10 @@ local wk = require("which-key")
 -- and hide <leader>1
 
 wk.register({
-    e = {
-        name = "explorer",
-    },
-    s = {
-        name = "search",
-    },
+    e = { name = "explorer", },
+    s = { name = "search", },
+    o = { name = "option", },
+    t = { name = "theme", },
   -- f = {
     -- name = "file", -- optional group name
     -- f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label

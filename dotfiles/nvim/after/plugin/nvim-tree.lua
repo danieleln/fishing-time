@@ -10,13 +10,13 @@ local function on_attach(bufnr)
     end
 
     -- Change directory
-    vim.keymap.set('n', 'cd',    api.tree.change_root_to_node,   opts('[c]hange [d]irectory'))
+    vim.keymap.set('n', 'R',    api.tree.change_root_to_node,   opts('change [R]oot to node'))
 
     -- Close
     vim.keymap.set('n', 'q',     api.tree.close,                opts('[c]lose the tree'))
 
     -- Refresh
-    vim.keymap.set('n', 'R',     api.tree.reload,               opts('[R]efresh tree'))
+    vim.keymap.set('n', 'U',     api.tree.reload,               opts('[U]update tree'))
 
     -- Search
     vim.keymap.set('n', 's',     api.tree.search_node,          opts('[s]earch node'))

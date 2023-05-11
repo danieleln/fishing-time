@@ -17,46 +17,25 @@ vim.opt.rtp:prepend(lazypath)
 
 --[[ Loading plugins ]]
 require('lazy').setup({
-    -- Gruvbox theme
+    -- Color schemes
     {
-        'ellisonleao/gruvbox.nvim',
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme 'gruvbox'
+        'navarasu/onedark.nvim',
+        'ray-x/aurora',
+        'catppuccin/nvim',
+        'sainnhe/everforest',
+        'mhartington/oceanic-next',
+        'rose-pine/neovim',
+        'shaunsingh/nord.nvim',
+        'marko-cerovac/material.nvim',
+        'Mofiqul/vscode.nvim',
+        'rafamadriz/neon',
 
-            -- Transparent bg
---             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---             vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        end,
+        -- prioritize the scheme that is loaded at startup
+        -- priority = 1000,
     },
 
 
---     -- Onedark theme
---     {
---         'navarasu/onedark.nvim',
---         priority = 1000,
---         config = function()
---             vim.cmd.colorscheme 'onedark'
--- 
---             -- Transparent bg
---             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---             vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         end,
---     },
 
-
---     -- Rose-pine colorscheme
---     {
---         'rose-pine/neovim',
---         priority = 1000,
---         config = function()
---             vim.cmd.colorscheme 'rose-pine'
--- 
---             -- Transparent bg
---             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---             vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         end,
---     },
 
 
     -- Lualine as statusline
@@ -113,11 +92,13 @@ require('lazy').setup({
         'nvim-treesitter/nvim-treesitter',
         dependencies = {
             'nvim-treesitter/nvim-treesitter-textobjects',
+            -- Coloring parenthesis pairs
+            'mrjones2014/nvim-ts-rainbow',
         },
         build = ":TSUpdate",
     },
 
-    
+
     -- LSP
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
@@ -126,5 +107,6 @@ require('lazy').setup({
 
     -- Which key
     'folke/which-key.nvim',
+
 
 }, {})

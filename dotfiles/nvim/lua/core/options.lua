@@ -44,15 +44,16 @@ vim.wo.relativenumber = true
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
+-- Remove this option if you want your OS clipboard to remain independent.
+-- See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
--- Enable break indent
--- vim.o.breakindent = true
-
--- Enable line wrapping
--- vim.o.wrap = true
+-- Enable soft wrapping
+vim.o.wrap = true
+vim.o.linebrak = true
+vim.o.list = false
+vim.o.textwidth = 75
+vim.o.colorcolumn = "70,75"
 
 -- Save undo history
 vim.o.undofile = true
@@ -76,4 +77,5 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
 
