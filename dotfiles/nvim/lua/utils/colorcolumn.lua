@@ -8,7 +8,7 @@ end
 module.toggle = function()
     if vim.o.colorcolumn == "" then
         -- default colorcolumn
-        vim.o.colorcolumn = "70,75"
+        vim.o.colorcolumn = "70,75,100"
     else
         -- remove colorcolumn
         vim.o.colorcolumn = ""

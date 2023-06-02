@@ -49,11 +49,11 @@ vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable soft wrapping
-vim.o.wrap = true
-vim.o.linebrak = true
-vim.o.list = false
-vim.o.textwidth = 75
-vim.o.colorcolumn = "70,75"
+-- vim.o.wrap = true
+-- vim.o.linebrak = true
+-- vim.o.list = false
+-- vim.o.textwidth = 75
+vim.o.colorcolumn = "70,75,100"
 
 -- Save undo history
 vim.o.undofile = true

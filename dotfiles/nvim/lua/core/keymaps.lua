@@ -1,15 +1,15 @@
 
--- Disable space since it's already the leader key
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+-- disables space since it's already the leader key
+vim.keymap.set({ 'n', 'v' }, '<space>', '<nop>', { silent = true })
 
 
 
 --[[ INSERT MODE BINDINGS ]]
 
--- Enter normal mode with 'jj'
+-- enters normal mode with 'jj'
 vim.keymap.set('i', 'jj', '<esc>')
 
--- Disable "Windows" keys
+-- disables "Windows" keys
 vim.keymap.set('i', '<backspace>', '')
 vim.keymap.set('i', '<c-bs>',      '')
 vim.keymap.set('i', '<left>',      '')
@@ -22,8 +22,7 @@ vim.keymap.set('i', '<enter>',     '')
 
 
 --[[ NORMAL MODE BINDINGS ]]
-
--- toggle option hlsearc
+-- toggles option hlsearch
 vim.keymap.set('n', '<leader>oh', ':set hlsearch!<cr>', {
     desc = 'toggle [o]ption [h]lsearch' })
 
@@ -32,10 +31,14 @@ vim.keymap.set('n', '<leader>oc', function()
     require('utils.colorcolumn').toggle()
 end, { desc = 'toggle [o]ption [c]olorcolumn' })
 
--- Make 'Y' yank till the end of the line
+-- keeps line centered
+vim.keymap.set('n', 'j', 'jzz')
+vim.keymap.set('n', 'k', 'kzz')
+
+-- makes 'Y' yank till the end of the line
 vim.keymap.set('n', 'Y', 'y$')
 
--- Remap j,k to deal with word wrapping
+-- remaps j,k to deal with word wrapping
 -- (these mappings can cause issues with macros that are supposed to
 -- work once per - actual - line)
 -- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", {
