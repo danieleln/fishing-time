@@ -46,6 +46,7 @@ abbr mkcd "mkdir-cd"
 
 
 # {{ cp, mkdir abbr }}
+# TODO: add verbose (+interactive?) flag to cp,mkdir,rm
 abbr -a cp "cp -r"       # copy is now recursive by default
 abbr -a mkdir "mkdir -p" # mkdir now builds also the parent dir by default
 
@@ -54,6 +55,27 @@ abbr -a mkdir "mkdir -p" # mkdir now builds also the parent dir by default
 # {{ neovim abbr }}
 abbr -a vim "nvim"
 abbr -a vi  "nvim"
+
+
+
+# {{ git abbr }}
+abbr -a g   "git"
+
+abbr -a gin "git init"
+
+abbr -a glg "git log"
+abbr -a gst "git status"
+
+abbr -a gad "git add"
+abbr -a grm "git rm"
+abbr -a gmv "git mv"
+
+abbr -a gcm "git commit -m"
+abbr -a gbr "git branch"
+abbr -a gco "git checkout"
+
+abbr -a gps "git push -u origin"
+abbr -a gpl "git pull"
 
 
 
