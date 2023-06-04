@@ -18,7 +18,7 @@ set -U __prompt_session_color_hostname           yellow
 # ICON SEGMENT (prompt symbol)
 set -U __prompt_icon_color_user                  yellow
 set -U __prompt_icon_color_root                  bryellow
-set -U __prompt_icon_symbol_user                 'ﬦ'
+set -U __prompt_icon_symbol_user                 'λ'
 set -U __prompt_icon_symbol_root                 'Λ'
 
 # STATUS SEGMENT (exit code)
