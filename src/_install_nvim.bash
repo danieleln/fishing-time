@@ -30,4 +30,14 @@ chmod +x nvim
 sudo mv nvim /usr/bin
 
 
+echo
+echo
+echo "NB: not to have issues with appimages and libfuse2, make sure that WSL is version 2, by running these commands in PowerShell:"
+echo "    wsl -l -v    # to lists all installed kernels with the respective version"
+echo "if the listed version is 1, then run:"
+echo "    wsl --udpate"
+echo "    wsl --set-version [VersionName] 2"
+echo
+echo
+
 cd -
