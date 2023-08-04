@@ -45,10 +45,11 @@ abbr mkcd "mkdir-cd"
 
 
 
-# {{ cp, mkdir abbr }}
+# {{ cp, mkdir, rm abbr }}
 # TODO: add verbose (+interactive?) flag to cp,mkdir,rm
-abbr -a cp "cp -r"       # copy is now recursive by default
+abbr -a cp    "cp -r"    # copy is now recursive by default
 abbr -a mkdir "mkdir -p" # mkdir now builds also the parent dir by default
+abbr -a rmrf  "rm -rf"
 
 
 
